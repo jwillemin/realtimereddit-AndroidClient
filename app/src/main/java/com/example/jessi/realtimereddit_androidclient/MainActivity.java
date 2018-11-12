@@ -1,6 +1,7 @@
 package com.example.jessi.realtimereddit_androidclient;
 
 import android.content.Intent;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,12 +14,26 @@ import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity implements GetPosts.AsyncResponse {
 
+    SwipeRefreshLayout swipeRefreshLayout = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle(R.string.stories_label);
 
+        fetchData();
+
+        swipeRefreshLayout = findViewById(R.id.swiperefresh);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                fetchData();
+            }
+        });
+    }
+
+    public void fetchData(){
         GetPosts getPosts = new GetPosts();
         getPosts.delegate = this;
         getPosts.execute();
@@ -26,7 +41,6 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
 
     @Override
     public void proccessFinish(RedditPosts redditPosts) {
-
         final ArrayList<Post> posts = new ArrayList<>();
         for (int i = 0; i < redditPosts.getData().getChildren().length; i++){
             posts.add(redditPosts.getData().getChildren()[i].getData());
@@ -42,5 +56,9 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
         ListView postList = (ListView) findViewById(R.id.post_list);
         PostAdapter adapter = new PostAdapter(MainActivity.this, R.layout.list_item, posts);
         postList.setAdapter(adapter);
+
+        if (swipeRefreshLayout.isRefreshing()){
+            swipeRefreshLayout.setRefreshing(false);
+        }
     };
 }
