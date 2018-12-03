@@ -4,12 +4,12 @@
 
     <item
         android:id="@+id/real_time_toggle"
-        android:icon="@android:drawable/ic_menu_recent_history"
+        android:icon="@android:drawable/ic_media_pause"
         android:title="Real Time Toggle"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/subreddit"
-        android:icon="@android:drawable/ic_input_get"
+        android:icon="@android:drawable/ic_media_ff"
         android:title="Select Subreddit"
         app:showAsAction="ifRoom" />
 </menu>

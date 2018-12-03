@@ -5,18 +5,19 @@ import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity implements GetPosts.AsyncResponse {
 
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
 
     SwipeRefreshLayout swipeRefreshLayout = null;
     String subreddit = "";
+    boolean realTimeRefresh = false;
+    Timer t;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
         setTitle(R.string.stories_label);
 
         fetchData();
+        setRealTimeRefresh();
 
         swipeRefreshLayout = findViewById(R.id.swiperefresh);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -40,6 +44,26 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
                 fetchData();
             }
         });
+    }
+
+    public void setRealTimeRefresh(){
+        if (realTimeRefresh){
+            Log.i("realTimeRefresh: ", "ON");
+            t = new Timer();
+            t.scheduleAtFixedRate(new TimerTask() {
+                @Override
+                public void run() {
+                    Log.i("realTimeRefresh: ", "Fetching...");
+                    fetchData();
+                }
+            }, 0,5000);
+        }
+        else {
+            Log.i("realTimeRefresh: ", "OFF");
+            if (t != null){
+                t.cancel();
+            }
+        }
     }
 
     @Override
@@ -53,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.real_time_toggle:
+                realTimeRefresh = !realTimeRefresh;
+                setRealTimeRefresh();
                 return true;
 
             case R.id.subreddit:
