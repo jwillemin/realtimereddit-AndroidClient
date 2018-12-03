@@ -14,9 +14,17 @@ import java.net.URL;
 
 public class GetPosts extends AsyncTask<Void, Void, RedditPostModel> {
 
-    public static final String REDDIT_URL = "https://www.reddit.com/r/politics/rising.json?sort=new";
+    public static final String REDDIT_URL = "https://www.reddit.com/r/";
+    public static final String SORT_URL = "/rising.json?sort=new";
 
     public AsyncResponse delegate = null;
+    public String subreddit = "politics";
+
+    public GetPosts(String subreddit) {
+        if (!subreddit.equals("")){
+            this.subreddit = subreddit;
+        }
+    }
 
     @Override
     protected RedditPostModel doInBackground(Void... voids) {
@@ -25,7 +33,7 @@ public class GetPosts extends AsyncTask<Void, Void, RedditPostModel> {
         RedditPostModel redditPosts = new RedditPostModel();
 
         try{
-            URL url = new URL(REDDIT_URL);
+            URL url = new URL(REDDIT_URL + subreddit + SORT_URL);
 
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.connect();

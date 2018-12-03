@@ -1,5 +1,6 @@
 package com.example.jessi.realtimereddit_androidclient;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +16,10 @@ import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity implements GetPosts.AsyncResponse {
 
+    public static final int SUBREDDIT_CHANGE_REQ = 1;
+
     SwipeRefreshLayout swipeRefreshLayout = null;
+    String subreddit = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
 
             case R.id.subreddit:
                 Intent intent = new Intent(MainActivity.this, SubredditSelectionActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, SUBREDDIT_CHANGE_REQ);
                 return true;
 
             default:
@@ -59,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
     }
 
     public void fetchData(){
-        GetPosts getPosts = new GetPosts();
+        GetPosts getPosts = new GetPosts(subreddit);
         getPosts.delegate = this;
         getPosts.execute();
     }
@@ -84,6 +88,19 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
 
         if (swipeRefreshLayout.isRefreshing()){
             swipeRefreshLayout.setRefreshing(false);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == SUBREDDIT_CHANGE_REQ) {
+            if(resultCode == Activity.RESULT_OK){
+                subreddit = data.getStringExtra("subreddit");
+                fetchData();
+            }
+            if (resultCode == Activity.RESULT_CANCELED) {
+
+            }
         }
     }
 }

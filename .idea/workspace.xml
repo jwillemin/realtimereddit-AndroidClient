@@ -9,20 +9,12 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78d272f0-204d-40e0-917b-0f81f72740f0" name="Default" comment="initial json call and parsing into list view">
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/GetSubreddits.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditAdapter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditModel.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditSelectionActivity.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_subreddit_selection.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/subreddit_list_item.xml" />
+    <list default="true" id="78d272f0-204d-40e0-917b-0f81f72740f0" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/GetPosts.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/GetPosts.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/PostAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/PostAdapter.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/RedditPosts.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/RedditPostModel.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/post_list_item.xml" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditAdapter.java" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditSelectionActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditSelectionActivity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,7 +36,45 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="96" column="49" lean-forward="false" selection-start-line="96" selection-start-column="49" selection-end-line="96" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1016#1173#0" expanded="true" />
+                <element signature="e#1172#1173#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GetPosts.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/GetPosts.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="488">
+              <caret line="35" column="63" lean-forward="false" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubredditSelectionActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditSelectionActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="46" column="52" lean-forward="false" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+              <folding>
+                <element signature="e#1484#1880#0" expanded="true" />
+                <element signature="e#1879#1880#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -2077,7 +2107,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/PostJsonParser.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/Post.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/GetPosts.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
@@ -2086,12 +2115,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/RedditPosts.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/RedditPostModel.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/GetSubreddits.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/MainActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditSelectionActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditModel.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_subreddit_selection.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/subreddit_list_item.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditSelectionActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/GetPosts.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2337,7 +2367,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543805850068</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add call and view for list of top subreddits">
+      <created>1543809430391</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543809430391</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2353,7 +2390,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47959185" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3809524" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2405,11 +2442,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial json call and parsing into list view" />
     <MESSAGE value="add action items to nav bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="add action items to nav bar" />
+    <MESSAGE value="add call and view for list of top subreddits" />
+    <option name="LAST_COMMIT_MESSAGE" value="add call and view for list of top subreddits" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/MainActivity.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2451,8 +2497,8 @@
         <state relative-caret-position="672">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
-            <element signature="e#1852#1853#0" expanded="false" />
-            <element signature="e#1904#1905#0" expanded="false" />
+            <element signature="e#2088#2089#0" expanded="false" />
+            <element signature="e#2140#2141#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2564,11 +2610,8 @@
           <caret line="51" column="37" lean-forward="false" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#747#769#0" expanded="true" />
-            <element signature="e#905#1062#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#2216#2395#0" expanded="true" />
-            <element signature="e#2394#2395#0" expanded="true" />
+            <element signature="e#1016#1173#0" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2579,11 +2622,8 @@
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#747#769#0" expanded="true" />
-            <element signature="e#905#1062#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#2216#2395#0" expanded="true" />
-            <element signature="e#2394#2395#0" expanded="true" />
+            <element signature="e#1016#1173#0" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2722,29 +2762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="87" column="5" lean-forward="false" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#747#769#0" expanded="true" />
-            <element signature="e#905#1062#0" expanded="true" />
-            <element signature="e#1061#1062#0" expanded="true" />
-            <element signature="e#2216#2395#0" expanded="true" />
-            <element signature="e#2394#2395#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/GetPosts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/RedditPostModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-491">
@@ -2823,17 +2840,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="41" column="72" lean-forward="false" selection-start-line="41" selection-start-column="72" selection-end-line="41" selection-end-column="72" />
+        <state relative-caret-position="173">
+          <caret line="38" column="48" lean-forward="true" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/SubredditSelectionActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="35" column="42" lean-forward="false" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+        <state relative-caret-position="258">
+          <caret line="46" column="52" lean-forward="false" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
+          <folding>
+            <element signature="e#1484#1880#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/GetPosts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="35" column="63" lean-forward="false" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/jessi/realtimereddit_androidclient/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="96" column="49" lean-forward="false" selection-start-line="96" selection-start-column="49" selection-end-line="96" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1016#1173#0" expanded="true" />
+            <element signature="e#1172#1173#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -40,7 +40,6 @@ public class SubredditAdapter extends ArrayAdapter<Subreddit> {
 
         viewHolder = new SubredditAdapter.ViewHolder();
         viewHolder.subredditName = view.findViewById(R.id.subreddit_name);
-
         viewHolder.subredditName.setText(subreddit.getDisplayName());
         return view;
     }
