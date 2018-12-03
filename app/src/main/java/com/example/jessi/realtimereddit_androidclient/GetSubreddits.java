@@ -12,20 +12,20 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class GetPosts extends AsyncTask<Void, Void, RedditPostModel> {
+public class GetSubreddits extends AsyncTask<Void, Void, SubredditModel> {
 
-    public static final String REDDIT_URL = "https://www.reddit.com/r/politics/rising.json?sort=new";
+    public static final String SUBREDDIT_URL = "https://www.reddit.com/reddits.json";
 
-    public AsyncResponse delegate = null;
+    public GetSubreddits.AsyncResponse delegate = null;
 
     @Override
-    protected RedditPostModel doInBackground(Void... voids) {
+    protected SubredditModel doInBackground(Void... voids) {
 
         String response = null;
-        RedditPostModel redditPosts = new RedditPostModel();
+        SubredditModel subreddits = new SubredditModel();
 
         try{
-            URL url = new URL(REDDIT_URL);
+            URL url = new URL(SUBREDDIT_URL);
 
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.connect();
@@ -40,7 +40,7 @@ public class GetPosts extends AsyncTask<Void, Void, RedditPostModel> {
                 }
 
                 response = builder.toString();
-                redditPosts = new Gson().fromJson(response, RedditPostModel.class);
+                subreddits = new Gson().fromJson(response, SubredditModel.class);
 
             }
             else{
@@ -51,16 +51,16 @@ public class GetPosts extends AsyncTask<Void, Void, RedditPostModel> {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        return redditPosts;
+        return subreddits;
     }
 
     @Override
-    protected void onPostExecute(RedditPostModel redditPosts) {
-        delegate.proccessFinish(redditPosts);
+    protected void onPostExecute(SubredditModel subreddits) {
+        delegate.proccessFinish(subreddits);
     }
 
     public interface AsyncResponse{
-        void proccessFinish(RedditPostModel redditPosts);
+        void proccessFinish(SubredditModel subreddits);
     }
+
 }

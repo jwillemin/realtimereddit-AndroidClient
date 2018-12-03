@@ -11,14 +11,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class PostAdapter extends ArrayAdapter<Post> {
+public class SubredditAdapter extends ArrayAdapter<Subreddit> {
 
     Context context;
-    PostAdapter.ViewHolder viewHolder = null;
+    SubredditAdapter.ViewHolder viewHolder = null;
     int resource = 0;
 
-    public PostAdapter(Context context, int resource, ArrayList<Post> redditPosts) {
-        super(context, resource, redditPosts);
+    public SubredditAdapter(Context context, int resource, ArrayList<Subreddit> subreddits) {
+        super(context, resource, subreddits);
         this.context = context;
         this.resource = resource;
     }
@@ -31,29 +31,22 @@ public class PostAdapter extends ArrayAdapter<Post> {
 
         if (convertView == null){
             LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.post_list_item, null);
+            view = inflater.inflate(R.layout.subreddit_list_item, null);
         } else {
             view = convertView;
         }
 
-        Post post = getItem(position);
+        Subreddit subreddit = getItem(position);
 
-        viewHolder = new PostAdapter.ViewHolder();
-        viewHolder.title = view.findViewById(R.id.post_title);
-        viewHolder.upvotes = view.findViewById(R.id.upvotes);
-        viewHolder.comments = view.findViewById(R.id.comments);
+        viewHolder = new SubredditAdapter.ViewHolder();
+        viewHolder.subredditName = view.findViewById(R.id.subreddit_name);
 
-        viewHolder.title.setText(post.getTitle());
-        viewHolder.upvotes.setText(String.valueOf(post.getUpvotes()) + " Upvotes");
-        viewHolder.comments.setText(String.valueOf(post.getCommentCount()) + " Comments");
-
+        viewHolder.subredditName.setText(subreddit.getDisplayName());
         return view;
     }
 
     private class ViewHolder{
-        TextView title;
-        TextView upvotes;
-        TextView comments;
+        TextView subredditName;
     }
 
 }

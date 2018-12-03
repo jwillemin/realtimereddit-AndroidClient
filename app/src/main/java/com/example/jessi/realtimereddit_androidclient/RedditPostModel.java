@@ -2,11 +2,9 @@ package com.example.jessi.realtimereddit_androidclient;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.ArrayList;
-
-public class RedditPosts {
+public class RedditPostModel {
     private String kind;
-    private Data data;
+    private PostData data;
 
     public String getKind() {
         return kind;
@@ -16,16 +14,16 @@ public class RedditPosts {
         this.kind = kind;
     }
 
-    public Data getData() {
+    public PostData getPostData() {
         return data;
     }
 
-    public void setData(Data dataObject) {
+    public void setPostData(PostData dataObject) {
         this.data = dataObject;
     }
 }
 
-class Data {
+class PostData {
     private float dist;
     private Children[] children;
 

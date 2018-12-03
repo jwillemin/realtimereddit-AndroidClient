@@ -65,10 +65,10 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
     }
 
     @Override
-    public void proccessFinish(RedditPosts redditPosts) {
+    public void proccessFinish(RedditPostModel redditPosts) {
         final ArrayList<Post> posts = new ArrayList<>();
-        for (int i = 0; i < redditPosts.getData().getChildren().length; i++){
-            posts.add(redditPosts.getData().getChildren()[i].getData());
+        for (int i = 0; i < redditPosts.getPostData().getChildren().length; i++){
+            posts.add(redditPosts.getPostData().getChildren()[i].getData());
         }
 
         Collections.sort(posts, new Comparator<Post>() {
@@ -79,11 +79,11 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
         });
 
         ListView postList = (ListView) findViewById(R.id.post_list);
-        PostAdapter adapter = new PostAdapter(MainActivity.this, R.layout.list_item, posts);
+        PostAdapter adapter = new PostAdapter(MainActivity.this, R.layout.post_list_item, posts);
         postList.setAdapter(adapter);
 
         if (swipeRefreshLayout.isRefreshing()){
             swipeRefreshLayout.setRefreshing(false);
         }
-    };
+    }
 }
