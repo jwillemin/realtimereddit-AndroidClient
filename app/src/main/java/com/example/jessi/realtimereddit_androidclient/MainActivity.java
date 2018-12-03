@@ -8,6 +8,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -85,6 +89,15 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
         ListView postList = (ListView) findViewById(R.id.post_list);
         PostAdapter adapter = new PostAdapter(MainActivity.this, R.layout.post_list_item, posts);
         postList.setAdapter(adapter);
+
+        postList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(MainActivity.this, WebActivity.class);
+                intent.putExtra("url", posts.get(position).getUrl());
+                startActivity(intent);
+            }
+        });
 
         if (swipeRefreshLayout.isRefreshing()){
             swipeRefreshLayout.setRefreshing(false);
