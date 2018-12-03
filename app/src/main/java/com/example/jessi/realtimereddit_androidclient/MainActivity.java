@@ -27,6 +27,8 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
     String subreddit = "";
     boolean realTimeRefresh = false;
     Timer t;
+    PostAdapter adapter;
+    ArrayList<Post> posts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +102,9 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
 
     @Override
     public void proccessFinish(RedditPostModel redditPosts) {
-        final ArrayList<Post> posts = new ArrayList<>();
+        if (posts == null){
+            posts = new ArrayList<>();
+        } else posts.clear();
         for (int i = 0; i < redditPosts.getPostData().getChildren().length; i++){
             posts.add(redditPosts.getPostData().getChildren()[i].getData());
         }
@@ -112,9 +116,12 @@ public class MainActivity extends AppCompatActivity implements GetPosts.AsyncRes
             }
         });
 
-        ListView postList = (ListView) findViewById(R.id.post_list);
-        PostAdapter adapter = new PostAdapter(MainActivity.this, R.layout.post_list_item, posts);
-        postList.setAdapter(adapter);
+        ListView postList = findViewById(R.id.post_list);
+        if (adapter == null){
+            adapter = new PostAdapter(MainActivity.this, R.layout.post_list_item, posts);
+            postList.setAdapter(adapter);
+        }
+        else adapter.notifyDataSetChanged();
 
         postList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
